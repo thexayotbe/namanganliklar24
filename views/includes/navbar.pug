@@ -1,0 +1,32 @@
+mixin money(item)
+    .itemMoney
+        p.moneyicon= item.icon 
+        h3.moneytitle= item.amount
+
+doctype html 
+html 
+    head 
+        link(rel="stylesheet" href="./styles/includes.css")
+    body 
+        .navbar
+            .navbar-inner 
+                .navbar-head 
+                    .left-side 
+                        h3.logo 63-IDUMI
+                        each value,index in navbarMoney
+                            +money(value)
+                    .right-side    
+                        .search 
+                            img(src="./assets/icons/search.svg")
+                        button.language 
+                            img(src="./assets/icons/rusian.svg")
+                            h3 РУ
+                        button.tgsubsc
+                            img(src="./assets/icons/tg.svg")
+                            p Подписатся
+
+                .navbar-links 
+                     each value,index in navbarLinks
+                            p=value
+                .navbar-add
+                    img(src="./assets/images/banner.png")

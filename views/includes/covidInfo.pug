@@ -1,0 +1,15 @@
+mixin info_item(item)
+    .item
+        img(src=`${item.icon}`)
+        .text-side
+            h3= item.title
+            p= item.info
+
+doctype html 
+html 
+    head 
+        link(rel="stylesheet" href="./styles/includes.css")
+    body 
+        .covid-info
+            each value,index in covid_data
+                +info_item(value)

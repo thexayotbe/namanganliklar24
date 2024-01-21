@@ -1,0 +1,23 @@
+mixin news_item(item)
+    .news_item
+        img(src=`${item.img}`, alt="")
+        .news_text
+            h3= item.title
+            p= item.text 
+            .date
+                img(src="./assets/icons/date.svg", alt="")
+                p= item.date
+
+
+doctype html 
+html 
+    head 
+        link(rel="stylesheet" href="./styles/includes.css")
+    body 
+        .wrapper_news
+            h3= modernNewsData.title
+            .news_list
+                each value,index in last_news
+                    if index < modernNewsData.maxNumber
+                        +news_item(value)
+            button More News                    

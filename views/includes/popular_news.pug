@@ -1,0 +1,17 @@
+mixin news_item(item)
+    .news_item
+        p.text= item.text 
+        p.date= item.date
+
+
+doctype html 
+html 
+    head 
+        link(rel="stylesheet" href="./styles/includes.css")
+    body 
+        .popular_news
+            h3 Cамые популярные новости
+            .news_items
+                each value,index in popular_news
+                    +news_item(value)
+            img(src="./assets/images/ucell.png", alt="")       

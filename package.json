@@ -1,0 +1,17 @@
+{
+  "name": "namanganliklar_24",
+  "version": "1.0.0",
+  "description": "News of namangan city",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Mamajonov Xayotbek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "pug": "^3.0.2"
+  }
+}

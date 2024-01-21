@@ -1,0 +1,37 @@
+mixin main_cards(card)
+    .card
+        img(src = `${card.img}`)
+        .card-text
+            h3= card.title
+            p= card.date
+
+doctype html 
+html 
+    head
+        link(rel="stylesheet" href="./styles/main.css")
+        title Namanganliklar
+    body
+        include includes/navbar
+        include includes/covidInfo
+        .container
+            .main-cards
+                each value,index in main_card_data
+                    +main_cards(value)
+            .notification
+                img(src="./assets/icons/bell.svg", alt="")
+                h3 Хотите узнать новости первыми? подключите уведомления!
+                button Включит  уведомления!
+            - const modernNewsData = {maxNumber: 6, title :"Последние новости"}
+            .news_section
+                include includes/main_news
+                include includes/popular_news
+
+            .add_section
+                img(src="./assets/images/phone.png", alt="")
+                .text
+                    h3 Всегда будьте в курсе последних новостей!
+                    p Установите мобильное приложение NAMANGANLIKLAR24 и все новости в вашем кармане!
+                .apps
+                    img(src="./assets/images/gm.png", alt="")
+                    img(src="./assets/images/as.png", alt="")
+
