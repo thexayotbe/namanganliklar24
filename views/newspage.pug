@@ -1,0 +1,26 @@
+mixin paragraph(title,texts)
+    h3.titlePr=title
+    each text in texts
+        p.textPr= text
+doctype html 
+html 
+    head
+        link(rel="stylesheet" href="/styles/main.css")
+        title Namanganliklar
+    body
+        include includes/navbar
+        
+        .container
+            .news_section
+                .about_news
+                    h3.title= news_single.mainTitle
+                    .date 
+                        img(src="/assets/icons/date.svg", alt="")
+                        p= news_single.date
+                    img(src=`${news_single.img}`, alt="")
+                    +paragraph(news_single.title1, news_single.text1)
+                    +paragraph(news_single.title2, news_single.text2)
+                    p.tags= news_single.tags
+                include includes/popular_news
+            
+        include includes/footer

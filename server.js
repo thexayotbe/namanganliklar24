@@ -8,6 +8,7 @@ const {
   last_news,
   popular_news,
   footer_data,
+  news_single,
 } = require("./utils/index");
 
 const { navbarMoney, navbarLinks } = navbarData;
@@ -36,6 +37,15 @@ app.get("/politics", (req, res) => {
     last_news,
     popular_news,
     footer_data,
+  });
+});
+app.get("/news/:id", (req, res) => {
+  res.render("newspage", {
+    navbarMoney,
+    navbarLinks,
+    popular_news,
+    footer_data,
+    news_single,
   });
 });
 

@@ -100,12 +100,13 @@
   fill: #fff;
   filter: drop-shadow(0px 2px 5px rgba(159, 159, 159, 0.19));
 }
-.navbar-links p {
+.navbar-links a {
   color: #515151;
   font-family: Rubik;
   font-size: 19px;
   font-weight: 500;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
     color: #295091;
   }

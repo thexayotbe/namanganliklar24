@@ -106,3 +106,46 @@
     gap: 19px;
   }
 }
+.about_news {
+  .title {
+    color: #000;
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 17px;
+  }
+  .date {
+    display: flex;
+    margin: 14px 0;
+    p {
+      color: #7688a4;
+      font-family: Rubik;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .titlePr {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+  }
+  .textPr {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 20px 0;
+  }
+  .tags {
+    color: #28508e;
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 28px;
+  }
+}

@@ -5,14 +5,14 @@ mixin news_item(item)
             h3= item.title
             p= item.text 
             .date
-                img(src="./assets/icons/date.svg", alt="")
+                img(src="/assets/icons/date.svg", alt="")
                 p= item.date
 
 
 doctype html 
 html 
     head 
-        link(rel="stylesheet" href="./styles/includes.css")
+        link(rel="stylesheet" href="/styles/includes.css")
     body 
         .wrapper_news
             h3= modernNewsData.title

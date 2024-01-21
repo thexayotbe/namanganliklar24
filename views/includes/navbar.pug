@@ -6,7 +6,7 @@ mixin money(item)
 doctype html 
 html 
     head 
-        link(rel="stylesheet" href="./styles/navbar.css")
+        link(rel="stylesheet" href="/styles/navbar.css")
     body 
         .navbar
             .navbar-inner 
@@ -17,16 +17,15 @@ html
                             +money(value)
                     .right-side    
                         .search 
-                            img(src="./assets/icons/search.svg")
+                            img(src="/assets/icons/search.svg")
                         button.language 
-                            img(src="./assets/icons/rusian.svg")
+                            img(src="/assets/icons/rusian.svg")
                             h3 РУ
                         button.tgsubsc
-                            img(src="./assets/icons/tg.svg")
+                            img(src="/assets/icons/tg.svg")
                             p Подписатся
-
                 .navbar-links 
                      each value,index in navbarLinks
-                            p=value
+                            a(href=`/${value[1]}`)=value[0]
                 .navbar-add
-                    img(src="./assets/images/banner.png")
+                    img(src="/assets/images/banner.png")
