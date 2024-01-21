@@ -1,0 +1,21 @@
+doctype html 
+html 
+    head 
+        link(rel="stylesheet" href="./styles/footer.css")
+    body 
+        .footer 
+            .footer-inner    
+                .top
+                    h3 NAMANGANLIKLAR24 
+                    p Подписывайтесь на наш канал в Telegram и будьте всегда в курсе самых последних новостей:
+                    button
+                        img(src="./assets/icons/tgd.svg", alt="")
+                        p Подписатся
+                .bottom 
+                    .info
+                        p О сайте 
+                        p Воспроизводство, копирование, тиражирование, распростране ние и иное использование информации с сайта «NAMANGANLIKLAR24.UZ» возможно только с предварительного письменного разрешения редакции.
+                    ul.links 
+                        each value, index in footer_data 
+                            li= value
+

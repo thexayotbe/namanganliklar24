@@ -1,0 +1,15 @@
+doctype html 
+html 
+    head
+        link(rel="stylesheet" href="./styles/main.css")
+        title Namanganliklar
+    body
+        include includes/navbar
+        include includes/covidInfo
+        .container
+            .news_section
+                - const modernNewsData = {maxNumber: 9, title :"Политика"}
+                include includes/main_news
+                include includes/popular_news
+            
+        include includes/footer

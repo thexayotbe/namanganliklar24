@@ -165,6 +165,15 @@ const popular_news = [
     date: "11:31 / 15.05.2020",
   },
 ];
+const footer_data = [
+  "Информация о сайте",
+  "Напишите нам",
+  "Реклама",
+  "Прислать новость",
+  "Использование материалов",
+  "Темы дня",
+  "Наша команда",
+];
 
 module.exports = {
   covid_data,
@@ -172,4 +181,5 @@ module.exports = {
   main_card_data,
   last_news,
   popular_news,
+  footer_data,
 };

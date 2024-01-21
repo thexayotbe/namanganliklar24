@@ -7,6 +7,7 @@ const {
   main_card_data,
   last_news,
   popular_news,
+  footer_data,
 } = require("./utils/index");
 
 const { navbarMoney, navbarLinks } = navbarData;
@@ -24,6 +25,17 @@ app.get("/", (req, res) => {
     main_card_data,
     last_news,
     popular_news,
+    footer_data,
+  });
+});
+app.get("/politics", (req, res) => {
+  res.render("politic", {
+    navbarMoney,
+    navbarLinks,
+    covid_data,
+    last_news,
+    popular_news,
+    footer_data,
   });
 });
 
