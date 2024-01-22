@@ -7,6 +7,8 @@ doctype html
 html 
     head 
         link(rel="stylesheet" href="/styles/navbar.css")
+        script(src="/scripts/index.js")
+
     body 
         .navbar
             .navbar-inner 
@@ -21,7 +23,7 @@ html
                         button.language 
                             img(src="/assets/icons/rusian.svg")
                             h3 РУ
-                        button.tgsubsc
+                        button(onclick="toggleModal()").tgsubsc
                             img(src="/assets/icons/tg.svg")
                             p Подписатся
                 .navbar-links 
@@ -29,3 +31,12 @@ html
                             a(href=`/${value[1]}`)=value[0]
                 .navbar-add
                     img(src="/assets/images/banner.png")
+
+                    
+        .overlay(id="overlay")
+            .modal(id="modal")
+                p(onclick="toggleModal()").close x
+                h3 Подписывайтесь на наш канал в Telegram и будьте всегда в курсе самых последних новостей:
+                button(onclick="toggleModal()").tgsubsc
+                    img(src="/assets/icons/tg.svg")
+                    p Подписатся                
